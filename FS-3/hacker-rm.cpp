@@ -50,7 +50,7 @@ int main (int argc, char** argv) {
 
     close(fd); 
 
-    if (remove(argv[1])) {
+    if (remove(argv[1]) == -1) {
         perror("Error deleting file");
         exit(EXIT_FAILURE);
     }
