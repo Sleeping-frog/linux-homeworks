@@ -27,6 +27,9 @@ int main (int argc, char** argv) {
                 exit(EXIT_FAILURE);
         }
 
+	int count_data = 0;
+	int count_hole = 0;
+
 	int cur_pos = 0;
 	char buffer[4096];
 	int bytes_passed = 0;
@@ -41,6 +44,7 @@ int main (int argc, char** argv) {
 			perror("Error");
 			exit(EXIT_FAILURE);
 		}
+		count_data += bytes_passed;
 
 		while (bytes_passed > 0) {
 			if (read(src_fd_read, buffer, (bytes_passed > 4096 ? 4096 : bytes_passed)) == -1) {
@@ -63,6 +67,7 @@ int main (int argc, char** argv) {
 			perror("Error");
 			exit(EXIT_FAILURE);
 		}
+		count_hole += bytes_passed;
 		if (lseek(src_fd_read, bytes_passed, SEEK_CUR) == -1) {
 			perror("Error");
                         exit(EXIT_FAILURE);
@@ -75,4 +80,6 @@ int main (int argc, char** argv) {
 
 	close(src_fd);
 	close(dst_fd);
+
+	printf("copied %d bytes (data: %d, hole: %d).\n", count_data + count_hole, count_data, count_hole);
 }
