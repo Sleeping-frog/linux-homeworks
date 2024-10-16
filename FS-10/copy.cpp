@@ -36,7 +36,7 @@ int main (int argc, char** argv) {
 
 	while (true) {
 		bytes_passed = cur_pos;
-		cur_pos = lseek(src_fd, 0, SEEK_HOLE);
+		cur_pos = lseek(src_fd, cur_pos, SEEK_HOLE);
 		bytes_passed = cur_pos - bytes_passed;
 		if (cur_pos == -1) {
 			if (errno == ENXIO)
