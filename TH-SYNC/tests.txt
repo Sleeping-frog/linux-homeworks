@@ -1,0 +1,53 @@
+spin_lock:
+Final value is 500000
+Time: 0.041977 seconds
+Final value is 500000
+Time: 0.152929 seconds
+Final value is 500000
+Time: 0.041623 seconds
+Final value is 500000
+Time: 0.034599 seconds
+Final value is 500000
+Time: 0.087291 seconds
+Final value is 500000
+Time: 0.053152 seconds
+Final value is 500000
+Time: 0.033456 seconds
+Final value is 500000
+Time: 0.035237 seconds
+
+mutex:
+Final value is 500000
+Time: 0.053159 seconds
+Final value is 500000
+Time: 0.069405 seconds
+Final value is 500000
+Time: 0.069517 seconds
+Final value is 500000
+Time: 0.072527 seconds
+Final value is 500000
+Time: 0.083164 seconds
+Final value is 500000
+Time: 0.081275 seconds
+Final value is 500000
+Time: 0.078242 seconds
+Final value is 500000
+Time: 0.089162 seconds
+
+semaphore:
+Final value is 500000
+Time: 0.18797 seconds
+Final value is 500000
+Time: 0.1392 seconds
+Final value is 500000
+Time: 0.228731 seconds
+Final value is 500000
+Time: 0.199704 seconds
+Final value is 500000
+Time: 0.210198 seconds
+Final value is 500000
+Time: 0.134206 seconds
+Final value is 500000
+Time: 0.211156 seconds
+Final value is 500000
+Time: 0.226534 seconds
